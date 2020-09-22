@@ -1,0 +1,134 @@
+* {
+  font-family: Georgia, serif;
+  box-sizing: border-box;
+
+  margin: 0 auto;
+}
+
+.heading {
+  text-align: center;
+}
+
+body {
+  background: #f1f1f1;
+}
+
+.container {
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.parent {
+  padding: 7.5% 5%;
+  margin: 0 0;
+}
+
+.child {
+  margin: auto;
+  background: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 35vw;
+  height: auto;
+  padding: 10% 10% 10% 10%;
+  line-height: 22px;
+}
+
+.labels {
+  padding: 2.5% 0%;
+  margin: 8px 0;
+  text-align: left;
+}
+.inputs {
+  width: 100%;
+  padding: 2.5% 2.5%;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.inputs_pass {
+  width: 100%;
+  padding: 2.5% 2.5%;
+  margin: 8px 0;
+  border: 1px solid red;
+  border-radius: 4px;
+  outline: none;
+}
+
+.buttons {
+  float: right;
+  margin: 8px 0;
+  background: #4caf50;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 3.5% 5%;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  * {
+    font-family: Georgia, serif;
+    box-sizing: border-box;
+
+    margin: 0 auto;
+  }
+
+  .heading {
+    text-align: center;
+  }
+
+  body {
+    background: #f1f1f1;
+  }
+
+  .container {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .parent {
+    padding: 5% 5% 0 5%;
+    height: auto;
+    margin: 0 0;
+  }
+
+  .child {
+    margin: auto;
+    background: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 80vw;
+    height: auto;
+    padding: 10% 10% 10% 10%;
+    line-height: 22px;
+  }
+
+  .labels {
+    padding: 2.5% 0%;
+    margin: 8px 0;
+    text-align: left;
+  }
+  .inputs {
+    width: 100%;
+    padding: 2.5% 2.5%;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .inputs_pass {
+    width: 100%;
+    padding: 2.5% 2.5%;
+    margin: 8px 0;
+    border: 1px solid red;
+    border-radius: 4px;
+    outline: none;
+  }
+}

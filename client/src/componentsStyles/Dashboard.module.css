@@ -1,0 +1,26 @@
+* {
+  font-family: Georgia, serif;
+  box-sizing: border-box;
+
+  margin: 0 auto;
+}
+.heading {
+  text-align: center;
+}
+.testcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 80vw;
+}
+
+.buttons {
+  float: right;
+  margin: 0.5% 4%;
+  background: #4caf50;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1% 1%;
+  display: block;
+  color: white;
+}

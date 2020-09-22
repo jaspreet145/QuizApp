@@ -1,0 +1,38 @@
+* {
+  font-family: Georgia, serif;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.header {
+  background: #5f5f5f;
+  padding: 0 0;
+  display: block;
+  width: 100vw;
+}
+
+.navitems {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 80px;
+  color: white;
+  font-size: 1.2em;
+}
+
+.timer {
+  grid-column: 2/3;
+  padding: 7px 5% 2% 5%;
+  border-radius: 20px;
+  border: 2px solid white;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.submit {
+  grid-column-start: 3;
+  margin: auto;
+
+  padding: 2% 10% 2% 10%;
+  border-radius: 20px;
+  border: 2px solid white;
+  float: right;
+}

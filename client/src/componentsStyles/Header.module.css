@@ -1,0 +1,45 @@
+* {
+  font-family: Georgia, serif;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.header {
+  background: linear-gradient(rgba(0, 2, 105), rgb(20, 1, 190));
+  background: #5f5f5f;
+  padding: 0 0;
+  display: block;
+  position: relative;
+}
+
+.navitems {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 2fr;
+  grid-template-rows: 80px;
+  color: white;
+  font-size: 1.2em;
+}
+
+.logo {
+  grid-column: 1/2;
+  margin: auto;
+  padding: 2% 10% 2% 10%;
+  border-radius: 20px;
+  border: 2px solid white;
+}
+
+.navlinks1 {
+  grid-column-start: 4;
+  margin: auto;
+
+  padding: 2% 10% 2% 10%;
+  border-radius: 20px;
+  border: 2px solid white;
+}
+.navlinks2 {
+  grid-column-start: 5;
+  margin: auto;
+
+  padding: 2% 10% 2% 10%;
+  border-radius: 20px;
+  border: 2px solid white;
+}

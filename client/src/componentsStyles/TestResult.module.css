@@ -1,0 +1,43 @@
+* {
+  font-family: Georgia, serif;
+  box-sizing: border-box;
+
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  justify-content: space-around;
+}
+
+.parent {
+  width: 70vw;
+  background: white;
+}
+
+.resultrow {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 0.5% auto;
+  width: 65vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.info {
+  width: 20vw;
+  background: white;
+  text-align: justify;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 8px auto;
+  padding: 1% 1% 1% 1%;
+  line-height: 22px;
+}
+
+.element {
+  display: inline;
+  text-align: center;
+}

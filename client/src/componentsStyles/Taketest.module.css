@@ -1,0 +1,64 @@
+* {
+  font-family: Georgia, serif;
+  box-sizing: border-box;
+
+  margin: 0 auto;
+}
+
+.heading {
+  text-align: center;
+}
+
+body {
+  background: #f1f1f1;
+}
+
+.parent {
+  padding: 5% 5%;
+}
+
+.taketest {
+  margin: auto;
+  background: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 40%;
+  padding: 5% 5% 5% 5%;
+  line-height: 22px;
+}
+
+.labels {
+  width: 100%;
+  padding: 2.5% 0%;
+  margin: 8px 0;
+  text-align: left;
+}
+.inputs {
+  width: 100%;
+  padding: 2.5% 2.5%;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.buttons {
+  float: right;
+  margin: 8px 0;
+  background: #4caf50;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 3.5% 5%;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .taketest {
+    margin: auto;
+    background: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 80%;
+    padding: 5% 5% 5% 5%;
+    line-height: 22px;
+  }
+}

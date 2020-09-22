@@ -1,0 +1,59 @@
+* {
+  font-family: Georgia, serif;
+  box-sizing: border-box;
+
+  margin: 0 auto;
+}
+
+.heading {
+  text-align: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(221, 217, 217, 0.5);
+}
+
+.modal {
+  background: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 40%;
+  padding: 5% 5% 5% 5%;
+  line-height: 22px;
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  right: auto;
+  bottom: auto;
+  overflow: auto;
+  outline: none;
+}
+
+.labels {
+  width: 100%;
+  padding: 2.5% 0%;
+  margin: 8px 0;
+  text-align: left;
+}
+.inputs {
+  width: 100%;
+  padding: 2.5% 2.5%;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.buttons {
+  float: right;
+  margin: 8px 0;
+  background: #4caf50;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 3.5% 5%;
+  color: white;
+}
