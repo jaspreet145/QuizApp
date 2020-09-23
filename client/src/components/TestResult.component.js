@@ -7,8 +7,11 @@ import styles from "../componentsStyles/Dashboard.module.css";
 import resultstyles from "../componentsStyles/TestResult.module.css";
 
 function Testresult(props) {
-  console.log("hello");
   let history = useHistory();
+  if (props.state === undefined) {
+    history.push("/");
+    window.location.reload();
+  }
   const [result, setresult] = useState([]);
   let expiry = new Date(props.location.state.expiry);
 

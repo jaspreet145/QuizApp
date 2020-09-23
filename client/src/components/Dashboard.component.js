@@ -37,20 +37,17 @@ const topics = [
 
 Modal.setAppElement("#root");
 function Dashboard() {
-  console.log("hello");
   let history = useHistory();
+  if (!localStorage.getItem("auth-token")) {
+    localStorage.clear();
+    history.push("/");
+  }
   const [tests, setTests] = useState([]);
   const [modalIsOpen, setmodalIsOpen] = useState(false);
   const [topic, settopic] = useState("");
   const [amount, setamount] = useState("");
   const [time, settime] = useState("");
   const [expiry, setexpiry] = useState(new Date());
-
-  const [count, setCount] = useState(0);
-
-  const forceUpdate = () => {
-    setCount(count + 1);
-  };
 
   const options = {
     headers: {

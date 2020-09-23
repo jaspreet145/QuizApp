@@ -7,6 +7,7 @@ function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   let history = useHistory();
+  if (localStorage.getItem("auth-token")) history.push("/dashboard");
 
   const onSubmit = (event) => {
     event.preventDefault();
