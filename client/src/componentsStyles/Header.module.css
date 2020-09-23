@@ -43,3 +43,14 @@
   border-radius: 20px;
   border: 2px solid white;
 }
+
+@media screen and (max-width: 600px) {
+  .navitems {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 80px;
+    color: white;
+    font-size: 1.2em;
+  }
+}
