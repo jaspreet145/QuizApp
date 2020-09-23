@@ -57,3 +57,21 @@
   padding: 3.5% 5%;
   color: white;
 }
+
+@media screen and (max-width: 600px) {
+  .modal {
+    background: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 80%;
+    padding: 5% 5% 5% 5%;
+    line-height: 22px;
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    right: auto;
+    bottom: auto;
+    overflow: auto;
+    outline: none;
+  }
+}
