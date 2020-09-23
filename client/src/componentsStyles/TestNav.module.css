@@ -30,7 +30,7 @@
 .submit {
   grid-column-start: 3;
   margin: auto;
-
+  cursor: pointer;
   padding: 2% 10% 2% 10%;
   border-radius: 20px;
   border: 2px solid white;
