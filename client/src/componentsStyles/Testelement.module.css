@@ -39,6 +39,7 @@
   width: 75vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  text-align: justify;
 }
 .row {
   border: 1px solid #ccc;

@@ -24,7 +24,8 @@ function Testresult(props) {
       .then((res) => setresult(res.data))
       .catch((err) => {
         console.log(err);
-        alert("couldn't fetch please reload");
+        alert("Couldn't Fetch!");
+        history.push("/dashboard");
       });
   }, []);
   return (

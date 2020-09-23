@@ -150,7 +150,7 @@ function Dashboard() {
             />
             <br />
             <label className={modalstyles.labels} htmlFor="time">
-              Time Duration(Mins):
+              Time Duration (Mins):
             </label>
             <input
               type="time"
@@ -190,7 +190,7 @@ function Dashboard() {
             <strong>No. of Ques</strong>
           </div>
           <div className={teststyles.element}>
-            <strong>Time Duration(Mins)</strong>
+            <strong>Time Duration (Mins)</strong>
           </div>
           <div className={teststyles.element}>
             <strong>Expiry</strong>
