@@ -7,11 +7,6 @@ import { useHistory } from "react-router-dom";
 function Question(props) {
   let history = useHistory();
 
-  if (props.state === undefined) {
-    history.push("/");
-    window.location.reload();
-  }
-
   const res = props.location.state.res;
   const mins = res.time.split(":")[0];
   const secs = res.time.split(":")[1];

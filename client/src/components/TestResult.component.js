@@ -8,10 +8,7 @@ import resultstyles from "../componentsStyles/TestResult.module.css";
 
 function Testresult(props) {
   let history = useHistory();
-  if (props.state === undefined) {
-    history.push("/");
-    window.location.reload();
-  }
+
   const [result, setresult] = useState([]);
   let expiry = new Date(props.location.state.expiry);
 
