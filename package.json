@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon authserver.js",
+    "start": "node authserver.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "client": "cd client && npm start",
-    "devstart": "concurrently \" nodemon authserver.js\" \" npm run client \" "
+    "client-start": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "devstart": "concurrently \" nodemon authserver.js\" \" npm run client-start \" "
   },
   "keywords": [],
   "author": "",
