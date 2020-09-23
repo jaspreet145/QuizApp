@@ -49,6 +49,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 80px;
+    grid-gap: 20px;
     color: white;
     font-size: 1.2em;
     padding: 0 20px 0 20px;
