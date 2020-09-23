@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import { Route, useLocation } from "react-router-dom";
+import { Route, Switch, useLocation } from "react-router-dom";
 import Homenav from "./components/HomeHeader.component";
 import Loginnav from "./components/LoginNav.component";
 import Taketest from "./components/TakeTest.component";
@@ -26,15 +26,18 @@ function App() {
         )}
       </nav>
       <main>
-        <Route exact path="/" component={Taketest} />
-        <Route
-          exact
-          path={["/login", "/register"]}
-          render={() => <Login setloggedin={setloggedin} />}
-        />
-        <Route exact path="/dashboard" component={dashboard} />
-        <Route exact path="/abouttest" component={Testresult} />
-        <Route exact path="/test" component={Ques} />
+        <Switch>
+          <Route exact path="/" component={Taketest} />
+          <Route
+            exact
+            path={["/login", "/register"]}
+            render={() => <Login setloggedin={setloggedin} />}
+          />
+          <Route exact path="/dashboard" component={dashboard} />
+          <Route exact path="/abouttest" component={Testresult} />
+          <Route exact path="/test" component={Ques} />
+          <Route render={() => <Redirect to="/" />} />
+        </Switch>
       </main>
     </React.Fragment>
   );
