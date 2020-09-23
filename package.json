@@ -7,9 +7,8 @@
     "start": "node authserver.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "client-start": "cd client && npm start",
-    "build": "cd client && npm run build",
     "install-client": "cd client && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build",
+    "heroku-postbuild": "cd client && npm install && npm run build",
     "devstart": "concurrently \" nodemon authserver.js\" \" npm run client-start \" "
   },
   "keywords": [],

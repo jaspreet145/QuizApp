@@ -26,11 +26,7 @@ function Register() {
     };
 
     axios
-      .post(
-        "http://localhost:4000/user/add",
-        { name, email, password },
-        options
-      )
+      .post("/api/user/add", { name, email, password }, options)
       .then((res) => {
         alert("account created");
         history.push("/login");

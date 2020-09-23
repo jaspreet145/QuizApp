@@ -24,7 +24,7 @@ function Testresult(props) {
     };
     axios
       .post(
-        "http://localhost:4000/test/getresults",
+        "http://localhost:4000/api/test/getresults",
         { pin: props.location.state.pin },
         options
       )

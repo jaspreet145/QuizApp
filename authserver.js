@@ -4,7 +4,7 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
@@ -22,10 +22,13 @@ mongoose.connection.once("open", () => {
 
 const userRouter = require("./routes/user");
 const testRouter = require("./routes/test");
-app.use("/user", userRouter);
-app.use("/test", testRouter);
+app.use("/api/user", userRouter);
+app.use("/api/test", testRouter);
 
-if (process.env.NODE_ENV === "production") {
+if (
+  process.env.NODE_ENV === "production" ||
+  process.env.NODE_ENV === "staging"
+) {
   app.use(express.static("client/build"));
 
   app.all("*", (req, res) => {

@@ -19,7 +19,7 @@ function Login(props) {
     };
 
     axios
-      .post("http://localhost:4000/user/login", { email, password }, options)
+      .post("/api/user/login", { email, password }, options)
       .then((res) => {
         console.log(res);
         localStorage.setItem("loggedin", true);

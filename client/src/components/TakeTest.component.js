@@ -17,7 +17,7 @@ function Taketest() {
       },
     };
     axios
-      .post("http://localhost:4000/test/", { pin, email, name }, options)
+      .post("/api/test/", { pin, email, name }, options)
       .then((res) => {
         localStorage.setItem("name", name);
         localStorage.setItem("email", email);

@@ -58,7 +58,7 @@ function Dashboard() {
 
   useEffect(() => {
     axios
-      .post("http://localhost:4000/test/gettests", {}, options)
+      .post("/api/test/gettests", {}, options)
       .then((res) => {
         for (let x of res.data) {
           for (let y of topics) {
@@ -77,7 +77,7 @@ function Dashboard() {
     event.preventDefault();
     axios
       .post(
-        "http://localhost:4000/test/addtest",
+        "/api/test/addtest",
         { topic, amount, time, expiry, created: new Date() },
         options
       )
