@@ -41,3 +41,30 @@
   display: inline;
   text-align: center;
 }
+
+@media screen and (max-width: 600px) {
+  .info {
+    width: 80vw;
+    background: white;
+    text-align: justify;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 8px auto;
+    padding: 5% 5% 5% 5%;
+    line-height: 22px;
+  }
+
+  .parent {
+    width: 80vw;
+    background: white;
+  }
+
+  .resultrow {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0.5% auto;
+    width: 75vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

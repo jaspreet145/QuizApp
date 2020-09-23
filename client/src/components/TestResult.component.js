@@ -10,9 +10,6 @@ function Testresult(props) {
   console.log("hello");
   let history = useHistory();
   const [result, setresult] = useState([]);
-  const forceupdate = useState()[1];
-
-  let check = setInterval(() => forceupdate(), 60000);
   let expiry = new Date(props.location.state.expiry);
 
   useEffect(() => {
@@ -33,7 +30,6 @@ function Testresult(props) {
         console.log(err);
         alert("couldn't fetch please reload");
       });
-    return () => clearInterval(check);
   }, []);
   return (
     <Fragment>
@@ -58,6 +54,7 @@ function Testresult(props) {
       <br />
       <div className={teststyles.container}>
         <div className={resultstyles.info}>
+          <h1 style={{ textAlign: "center" }}> About Test</h1>
           <strong>Pin: </strong> {props.location.state.pin}
           <br />
           <strong>Topic: </strong> {props.location.state.topicname}
@@ -66,7 +63,7 @@ function Testresult(props) {
           <br />
           <strong>Time Duration: </strong> {props.location.state.time} <br />
           <strong>Expiry: </strong> {expiry.getDate()}-{expiry.getMonth()}-
-          {expiry.getFullYear(1)}
+          {expiry.getFullYear()}
           <br />
         </div>
         <div className={resultstyles.parent}>

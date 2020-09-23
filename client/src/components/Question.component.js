@@ -18,21 +18,19 @@ function Question(props) {
   const [answers, setanswers] = useState({});
 
   const submithandler = () => {
-    console.log("called");
     let name = localStorage.getItem("name");
     let email = localStorage.getItem("email");
     let pin = localStorage.getItem("pin");
 
     let score = 0;
     for (let i = 0; i < length; i++) {
-      console.log(answers.i, res.results[i].correct_answer);
-      console.log(answers.i == res.results[i].correct_answer);
-      if (answers.i == res.results[i].correct_answer) {
-        console.log("correct");
-        score++;
+      console.log(answers[i], res.results[i].correct_answer);
+      console.log(answers[i] == res.results[i].correct_answer);
+      if (answers[i] == res.results[i].correct_answer) {
+        score += 1;
       }
     }
-
+    score = (score / length) * 100;
     const options = {
       headers: {
         "Content-Type": "application/json",
@@ -57,19 +55,44 @@ function Question(props) {
     console.log(score);
   };
 
+  function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+      // Generate random number
+      var j = Math.floor(Math.random() * (i + 1));
+
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
+
+    return array;
+  }
+
   useEffect(() => {
-    setquestion(
-      res.results[ques].question.replace(/&#?\w+;/g, (match) => entities[match])
-    );
-    setoptions([
-      res.results[ques].correct_answer.replace(
+    for (let i = 0; i < length; i++) {
+      res.results[i].question = res.results[i].question.replace(
         /&#?\w+;/g,
         (match) => entities[match]
-      ),
-      ...res.results[ques].incorrect_answers.map((x) =>
+      );
+      res.results[i].correct_answer = res.results[i].correct_answer.replace(
+        /&#?\w+;/g,
+        (match) => entities[match]
+      );
+      res.results[ques].incorrect_answers = res.results[
+        ques
+      ].incorrect_answers.map((x) =>
         x.replace(/&#?\w+;/g, (match) => entities[match])
-      ),
+      );
+    }
+  }, []);
+
+  useEffect(() => {
+    setquestion(res.results[ques].question);
+    setoptions([
+      res.results[ques].correct_answer,
+      ...res.results[ques].incorrect_answers,
     ]);
+    shuffleArray(options);
   }, [ques]);
 
   const entities = {
@@ -103,7 +126,7 @@ function Question(props) {
         ans = ele.childNodes[0].value;
       }
     }
-    setanswers({ ...answers, ques: ans });
+    setanswers({ ...answers, [ques]: ans });
   };
 
   return (

@@ -69,7 +69,6 @@ function Dashboard() {
           }
         }
         setTests(res.data);
-        forceUpdate();
       })
       .catch((err) => {
         if (!localStorage.getItem("auth-token")) history.push("/");
@@ -87,12 +86,13 @@ function Dashboard() {
       )
       .then((res) => {
         console.log("added");
+
+        setmodalIsOpen(false);
       })
       .catch((err) => {
         console.log(err);
         alert("error!");
       });
-    setmodalIsOpen(false);
   };
 
   return (

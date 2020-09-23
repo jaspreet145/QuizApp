@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Route } from "react-router-dom";
+import React, { Fragment, useState } from "react";
+import { Route, useLocation } from "react-router-dom";
 import Homenav from "./components/HomeHeader.component";
 import Loginnav from "./components/LoginNav.component";
 import Taketest from "./components/TakeTest.component";
@@ -11,13 +11,18 @@ import Ques from "./components/Question.component";
 function App() {
   const [loggedin, setloggedin] = useState(false);
 
+  let location = useLocation();
   return (
     <React.Fragment>
       <nav>
-        {loggedin ? (
-          <Loginnav setloggedin={setloggedin} />
+        {location.pathname != "/test" ? (
+          loggedin ? (
+            <Loginnav setloggedin={setloggedin} />
+          ) : (
+            <Homenav setloggedin={setloggedin} />
+          )
         ) : (
-          <Homenav setloggedin={setloggedin} />
+          <Fragment></Fragment>
         )}
       </nav>
       <main>

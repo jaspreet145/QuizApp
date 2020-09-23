@@ -6,7 +6,7 @@ function Resultelement(props) {
     <div className={styles.resultrow}>
       <div className={styles.element}>{props.name}</div>
       <div className={styles.element}>{props.email}</div>
-      <div className={styles.element}>{props.score}</div>
+      <div className={styles.element}>{props.score}%</div>
     </div>
   );
 }
