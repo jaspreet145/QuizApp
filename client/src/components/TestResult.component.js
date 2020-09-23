@@ -20,11 +20,7 @@ function Testresult(props) {
       },
     };
     axios
-      .post(
-        "http://localhost:4000/api/test/getresults",
-        { pin: props.location.state.pin },
-        options
-      )
+      .post("/api/test/getresults", { pin: props.location.state.pin }, options)
       .then((res) => setresult(res.data))
       .catch((err) => {
         console.log(err);
