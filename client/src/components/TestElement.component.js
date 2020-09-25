@@ -12,11 +12,34 @@ function Testelement(props) {
         style={{ textDecoration: "none", color: "black" }}
       >
         <div className={styles.row}>
-          <div className={styles.element}>{props.pin}</div>
-          <div className={styles.element}>{props.topicname}</div>
-          <div className={styles.element}>{props.amount}</div>
-          <div className={styles.element}>{props.time} mins</div>
           <div className={styles.element}>
+            <span className={styles.mobileinfo}>
+              <strong>Pin : </strong>
+            </span>
+            {props.pin}
+          </div>
+          <div className={styles.element}>
+            <span className={styles.mobileinfo}>
+              <strong>Topic : </strong>
+            </span>
+            {props.topicname}
+          </div>
+          <div className={styles.element}>
+            <span className={styles.mobileinfo}>
+              <strong>Amount : </strong>
+            </span>
+            {props.amount}
+          </div>
+          <div className={styles.element}>
+            <span className={styles.mobileinfo}>
+              <strong>Time : </strong>
+            </span>
+            {props.time} mins
+          </div>
+          <div className={styles.element}>
+            <span className={styles.mobileinfo}>
+              <strong>Expiry : </strong>
+            </span>
             {expiry.getDate()}-{expiry.getMonth()}-{expiry.getFullYear()}
           </div>
         </div>

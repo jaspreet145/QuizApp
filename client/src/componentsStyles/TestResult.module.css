@@ -72,6 +72,10 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
   }
+  .element {
+    text-align: left;
+    display: inline;
+  }
   .resultrow:first-child {
     display: none;
   }

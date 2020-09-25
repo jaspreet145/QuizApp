@@ -61,11 +61,36 @@
   text-align: center;
 }
 
+.mobileinfo {
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
   .container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     justify-content: space-around;
+  }
+  .element {
+    text-align: left;
+    display: inline;
+  }
+  .row {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0.5% auto;
+    width: 75vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .row:first-child {
+    display: none;
+  }
+
+  .mobileinfo {
+    display: inline;
   }
 }
