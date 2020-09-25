@@ -26,13 +26,13 @@ function Testelement(props) {
           </div>
           <div className={styles.element}>
             <span className={styles.mobileinfo}>
-              <strong>Amount : </strong>
+              <strong>No. of Ques : </strong>
             </span>
             {props.amount}
           </div>
           <div className={styles.element}>
             <span className={styles.mobileinfo}>
-              <strong>Time : </strong>
+              <strong>Time Duration (Mins) : </strong>
             </span>
             {props.time} mins
           </div>

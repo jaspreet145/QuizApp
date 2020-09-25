@@ -65,7 +65,7 @@
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .container {
     display: flex;
     flex-direction: column;
@@ -75,6 +75,8 @@
   .element {
     text-align: left;
     display: inline;
+
+    margin: 0 5px;
   }
   .row {
     border: 1px solid #ccc;
@@ -84,10 +86,6 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  }
-
-  .row:first-child {
-    display: none;
   }
 
   .mobileinfo {

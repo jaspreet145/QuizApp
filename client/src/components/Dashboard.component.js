@@ -6,6 +6,7 @@ import Modal from "react-modal";
 import modalstyles from "../componentsStyles/Modal.module.css";
 import teststyles from "../componentsStyles/Testelement.module.css";
 import { useHistory } from "react-router-dom";
+import resultstyles from "../componentsStyles/TestResult.module.css";
 
 const topics = [
   { id: 1, name: "<--select category-->" },
@@ -179,7 +180,7 @@ function Dashboard() {
         </Fragment>
       </Modal>
       <div className={teststyles.parent}>
-        <div className={teststyles.row}>
+        <div className={resultstyles.row}>
           <div className={teststyles.element}>
             <strong>Pin</strong>
           </div>

@@ -12,6 +12,15 @@
   justify-content: space-around;
 }
 
+.row {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 0.5% auto;
+  width: 75vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
 .parent {
   width: 70vw;
   background: white;
@@ -46,7 +55,7 @@
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .info {
     width: 80vw;
     background: white;
@@ -56,6 +65,19 @@
     margin: 8px auto;
     padding: 5% 5% 5% 5%;
     line-height: 22px;
+  }
+  .row {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0.5% auto;
+    width: 75vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .row:first-child {
+    display: none;
   }
 
   .parent {
@@ -75,6 +97,7 @@
   .element {
     text-align: left;
     display: inline;
+    margin: 0 5px;
   }
   .resultrow:first-child {
     display: none;
