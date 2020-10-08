@@ -33,6 +33,7 @@
   width: 65vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  height: 30px;
 }
 
 .info {

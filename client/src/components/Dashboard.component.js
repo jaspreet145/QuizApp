@@ -154,7 +154,7 @@ function Dashboard() {
               Time Duration (Mins):
             </label>
             <input
-              type="time"
+              type="text"
               id="time"
               name="time"
               className={modalstyles.inputs}

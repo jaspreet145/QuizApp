@@ -29,7 +29,7 @@ function Register() {
       .post("/api/user/add", { name, email, password }, options)
       .then((res) => {
         alert("account created");
-        history.push("/login");
+        history.push('/login');
       })
       .catch((err) => {
         alert(err.response.data.message);

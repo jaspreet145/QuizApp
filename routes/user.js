@@ -18,7 +18,7 @@ router.route("/add").post(async (req, res) => {
 
     const doc = await user.findOne({ email }).exec();
     if (doc) {
-      return res.status(400).send({ message: "Account already exits!" });
+      return res.status(400).send({ message: "Account already exists!" });
     }
 
     const newuser = new user({ name, email, password });
