@@ -21,6 +21,15 @@ function Timer(props) {
       setsecs(altsecs);
     }
   };
+  
+  useEffect(() => {
+      let altmins = Math.floor(allsecs / 60).toString();
+      if (altmins.length == 1) altmins = "0" + altmins;
+      let altsecs = (allsecs % 60).toString();
+      if (altsecs.length == 1) altsecs = "0" + altsecs;
+      setmins(altmins);
+      setsecs(altsecs);
+  });
 
   useEffect(() => {
     sethelper(setInterval(handle, 1000));
