@@ -9,7 +9,7 @@ function Question(props) {
 
   const res = props.location.state.res;
   const mins = res.time.split(":")[0];
-  const secs = res.time.split(":")[1];
+  const secs = (res.time.split(":")[1])? res.time.split(":")[1] : 0 ;
   const length = res.results.length;
   const [ques, setques] = useState(0);
   const [options, setoptions] = useState([]);
