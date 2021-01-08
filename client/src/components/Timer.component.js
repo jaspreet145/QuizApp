@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 function Timer(props) {
   const [allsecs, setallsecs] = useState(
@@ -8,6 +9,7 @@ function Timer(props) {
   const [mins, setmins] = useState(props.mins);
   const [secs, setsecs] = useState(props.secs);
   const [helper, sethelper] = useState(0);
+  let history = useHistory();
 
   const handle = () => {
     setallsecs(allsecs - 1);
@@ -29,6 +31,11 @@ function Timer(props) {
       if (altsecs.length == 1) altsecs = "0" + altsecs;
       setmins(altmins);
       setsecs(altsecs);
+      return () => {
+        alert('reloaded encountered, Submitting the test');
+        props.submithandler();
+        history.push("/");
+      };
   });
 
   useEffect(() => {
