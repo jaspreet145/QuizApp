@@ -32,9 +32,14 @@ function Timer(props) {
       setmins(altmins);
       setsecs(altsecs);
       return () => {
-        alert('reloaded encountered, Submitting the test');
-        props.submithandler();
-        history.push("/");
+        if (window.performance) {
+          if (performance.navigation.type == 1) {
+            alert('reloaded encountered, Submitting the test');
+            props.submithandler();
+            history.push("/");
+          } 
+}
+        
       };
   });
 
