@@ -36,7 +36,6 @@ function Timer(props) {
           if (performance.navigation.type == 1) {
             alert('reloaded encountered, Submitting the test');
             props.submithandler();
-            history.push("/");
           } 
 }
         
