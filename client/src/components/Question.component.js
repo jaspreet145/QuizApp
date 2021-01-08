@@ -23,8 +23,6 @@ function Question(props) {
 
     let score = 0;
     for (let i = 0; i < length; i++) {
-      console.log(answers[i], res.results[i].correct_answer);
-      console.log(answers[i] == res.results[i].correct_answer);
       if (answers[i] == res.results[i].correct_answer) {
         score += 1;
       }
